@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Галерея - Сладкоежка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Кондитерская "Сладкоежка"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="order.html">Оставить заявку</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="testimonials.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Галерея изображений -->
+    <section>
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="images/cake1.jpg" alt="Торт 1" onclick="openModal('cake1')">
+            <img src="images/cake2.jpg" alt="Торт 2" onclick="openModal('cake2')">
+            <img src="images/cake3.jpg" alt="Торт 3" onclick="openModal('cake3')">
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Фото торта">
+            <div id="modal-text">
+                <!-- Здесь добавьте описание торта -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Кондитерская "Сладкоежка". Все права защищены.</p>
+    </footer>
+
+    <!-- JavaScript для открытия и закрытия модального окна -->
+    <script>
+        function openModal(cake) {
+            document.getElementById("modal").style.display = "flex";
+            const modalImage = document.getElementById("modal-image");
+            const modalText = document.getElementById("modal-text");
+
+            if (cake === 'cake1') {
+                modalImage.src = 'images/cake1.jpg';
+                modalText.innerHTML = '<p>"Торт "Шоколадная мечта" — нежный десерт с насыщенным вкусом шоколада. Мягкие коржи из тёмного и молочного шоколада в сочетании с воздушным кремом и тонкой глазурью создают богатую текстуру и оставляют долгое послевкусие."</p>';
+            } else if (cake === 'cake2') {
+                modalImage.src = 'images/cake2.jpg';
+                modalText.innerHTML = '<p>"Макарун "Фисташковый рай" — изысканный десерт с насыщенным фисташковым вкусом. Хрустящие корочки идеально дополняются нежной кремовой начинкой, раскрывая тонкий аромат фисташек с каждым кусочком."</p>';
+            } else if (cake === 'cake3') {
+                modalImage.src = 'images/cake3.jpg';
+                modalText.innerHTML = '<p>"Капкейки "Ванильный восторг" — воздушные ванильные капкейки с легким кремом и нотками настоящей ванили. Нежная текстура и изысканный вкус делают каждый капкейк особенным лакомством."</p>';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

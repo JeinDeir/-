@@ -1,0 +1,270 @@
+/* Основные настройки */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #ffcbcb;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Текст шапки */
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+/* Логотип */
+.logo {
+    max-width: 80px;
+}
+
+/* Кнопки */
+button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+/* Карточки товаров */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-item {
+    width: calc(25% - 20px);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Адаптивность карточек */
+@media (max-width: 800px) {
+    .product-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .product-item {
+        width: 100%;
+    }
+}
+
+/* Общие стили */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: #ff9999;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Отступы между изображениями */
+    justify-content: center;
+}
+
+.gallery img {
+    width: calc(33% - 10px); /* Ширина для трех изображений в ряд */
+    height: auto;
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивный стиль для галереи */
+@media (max-width: 800px) {
+    .gallery img {
+        width: calc(50% - 10px); /* Два изображения в ряд на меньших экранах */
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery img {
+        width: 100%; /* Одно изображение в ряд на маленьких экранах */
+    }
+}
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #ffcbcb;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Стили для галереи */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+#modal-text {
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #ff9999;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+

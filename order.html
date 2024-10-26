@@ -24,7 +24,7 @@
 
     <section>
         <h2>Оставить заявку</h2>
-        <form action="#" method="POST">
+        <form id="orderForm">
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required>
             <br><br>
@@ -41,8 +41,44 @@
         </form>
     </section>
 
+    <!-- Модальное окно -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>Ваша заявка на рассмотрении, с вами свяжется оператор.</p>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Кондитерская "Сладкоежка". Все права защищены.</p>
     </footer>
+
+    <script>
+        const modal = document.getElementById("confirmationModal");
+        const closeBtn = document.querySelector(".close-btn");
+
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы на сервер
+
+            let name = document.getElementById("name").value;
+            let phone = document.getElementById("phone").value;
+            let email = document.getElementById("email").value;
+            let order = document.getElementById("order").value;
+
+            if (name && phone && email && order) {
+                modal.style.display = "block"; // Показываем модальное окно
+            }
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none"; // Закрываем модальное окно
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none"; // Закрываем окно при клике вне его области
+            }
+        };
+    </script>
 </body>
 </html>

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сладости на любой вкус: торты, макароны и капкейки в кондитерской 'Сладкоежка'">
     <title>Кондитерская "Сладкоежка"</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <!-- Логотип слева от названия -->
-            <img src="images/logo.png" alt="Логотип" class="logo">
+            <img src="images/logo.png" alt="Логотип Кондитерской 'Сладкоежка'" class="logo">
             <h1>Кондитерская "Сладкоежка"</h1>
         </div>
         <nav>
@@ -26,37 +26,41 @@
         </nav>
     </header>
 
-    <section id="banner">
-        <h2>Сладости для особых моментов!</h2>
-        <p>Закажите торт на ваш праздник и получите скидку 10% при первом заказе!</p>
-        <button onclick="window.location.href='order.html'">Сделать заказ</button>
+    <section id="banner" class="container">
+        <div class="text-overlay">
+            <h2>Сладости для особых моментов!</h2>
+            <p>Закажите торт на ваш праздник и получите скидку 10% при первом заказе!</p>
+            <button id="order-btn">Сделать заказ</button>
+        </div>
     </section>
 
-   <section id="popular-products">
-    <h2>Популярные товары</h2>
-    <div class="products-container">
-        <div class="product-item">
-            <img src="images/cake1.jpg" alt="Торт 1">
-            <h3>Торт "Шоколадная мечта"</h3>
-            <p>Нежный шоколадный торт с густым кремом и карамелью.</p>
+    <section id="popular-products" class="container">
+        <div class="text-overlay">
+            <h2>Популярные товары</h2>
         </div>
-        <div class="product-item">
-            <img src="images/cake2.jpg" alt="Торт 2">
-            <h3>Макарун "Фисташковый рай"</h3>
-            <p>Французские макаруны с фисташковым кремом.</p>
+        <div class="products-container">
+            <div class="product-item">
+                <img src="images/cake1.jpg" alt="Торт 'Шоколадная мечта'">
+                <h3>Торт "Шоколадная мечта"</h3>
+                <p>Нежный шоколадный торт с густым кремом и карамелью.</p>
+            </div>
+            <div class="product-item">
+                <img src="images/cake2.jpg" alt="Макарун 'Фисташковый рай'">
+                <h3>Макарун "Фисташковый рай"</h3>
+                <p>Французские макаруны с фисташковым кремом.</p>
+            </div>
+            <div class="product-item">
+                <img src="images/cake3.jpg" alt="Капкейки 'Ванильный восторг'">
+                <h3>Капкейки "Ванильный восторг"</h3>
+                <p>Воздушные ванильные капкейки с кремом.</p>
+            </div>
         </div>
-        <div class="product-item">
-            <img src="images/cake3.jpg" alt="Торт 3">
-            <h3>Капкейки "Ванильный восторг"</h3>
-            <p>Воздушные ванильные капкейки с кремом.</p>
-        </div>
-        <!-- Добавь больше товаров таким же образом -->
-    </div>
-</section>
+    </section>
 
-
-    <section id="testimonials">
-        <h2>Отзывы наших клиентов</h2>
+    <section id="testimonials" class="container">
+        <div class="text-overlay">
+            <h2>Отзывы наших клиентов</h2>
+        </div>
         <div class="testimonial">
             <p>"Заказывали торт на день рождения, все были в восторге!" — Мария</p>
         </div>
@@ -65,30 +69,38 @@
         </div>
     </section>
 
-    <section id="map">
-    <h2>Как нас найти</h2>
-    <p>Мы находимся по адресу: пгт Забайкальск, Забайкальский район, Забайкальский край 674650</p>
-    <!-- Вставка карты с новым адресом -->
-    <iframe 
-        src="https://maps.google.com/maps?q=пгт%20Забайкальск,%20Забайкальский%20район,%20Забайкальский%20край%20674650&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-        width="100%" 
-        height="300" 
-        frameborder="0" 
-        style="border:0" 
-        allowfullscreen>
-    </iframe>
-</section>
+    <section id="map" class="container">
+        <div class="text-overlay">
+            <h2>Как нас найти</h2>
+        </div>
+        <p>Мы находимся по адресу: пгт Забайкальск, Забайкальский район, Забайкальский край 674650</p>
+        <iframe 
+            src="https://maps.google.com/maps?q=пгт%20Забайкальск,%20Забайкальский%20район,%20Забайкальский%20край%20674650&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="300" 
+            class="map-frame" 
+            allowfullscreen>
+        </iframe>
+    </section>
 
-    <section id="socials">
-        <h2>Мы в соцсетях</h2>
+    <section id="socials" class="container">
+        <div class="text-overlay">
+            <h2>Мы в соцсетях</h2>
+        </div>
         <p>Подписывайтесь на нас, чтобы следить за новинками и акциями:</p>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Telegram</a> |
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Whatsapp</a> |
-        <a href="https://vk.com/jeindeir" target="_blank">VK</a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a> |
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a> |
+        <a href="https://vk.com/jeindeir" target="_blank" rel="noopener noreferrer">VK</a>
     </section>
 
     <footer>
         <p>&copy; 2024 Кондитерская "Сладкоежка". Все права защищены.</p>
     </footer>
+
+    <script>
+        document.getElementById("order-btn").addEventListener("click", function() {
+            window.location.href = 'order.html';
+        });
+    </script>
 </body>
 </html>

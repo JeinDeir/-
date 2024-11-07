@@ -22,24 +22,181 @@
         </nav>
     </header>
 
-    <section>
+    <section class="menu-container">
         <h2>Меню</h2>
-        <div class="menu-item">
-            <h3>Торт "Шоколадная мечта"</h3>
-            <p>Нежный шоколадный торт с густым кремом и карамелью. 1000 руб.</p>
+        <div class="categories">
+            <button onclick="showCategory('cakes')">Торты</button>
+            <button onclick="showCategory('pastries')">Пирожные</button>
+            <button onclick="showCategory('drinks')">Напитки</button>
         </div>
-        <div class="menu-item">
-            <h3>Макарон "Фисташковый рай"</h3>
-            <p>Французские макароны с фисташковым кремом. 250 руб.</p>
+
+        <!-- Категория: Торты -->
+        <div class="menu-items" id="cakes">
+            <div class="menu-item">
+                <img src="images/cake4.jpg" alt="Торт Карамельное наслаждение">
+                <h3>Торт "Карамельное наслаждение"</h3>
+                <p>Торт с карамельной начинкой и шоколадной глазурью. 1200 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake5.jpg" alt="Торт Ягодный микс">
+                <h3>Торт "Ягодный микс"</h3>
+                <p>Легкий бисквит с ягодами и ванильным кремом. 1100 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake6.jpg" alt="Торт Клубничный взрыв">
+                <h3>Торт "Клубничный взрыв"</h3>
+                <p>Клубничный торт с насыщенным кремом. 1300 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake7.jpg" alt="Торт Фисташковая нежность">
+                <h3>Торт "Фисташковая нежность"</h3>
+                <p>Фисташковый бисквит с легким сливочным кремом. 1400 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake8.jpg" alt="Торт Медовый рай">
+                <h3>Торт "Медовый рай"</h3>
+                <p>Нежный медовый торт с орехами и сметанным кремом. 900 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake9.jpg" alt="Торт Маракуйя и манго">
+                <h3>Торт "Маракуйя и манго"</h3>
+                <p>Тропический вкус с освежающим фруктовым кремом. 1500 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake10.jpg" alt="Торт Кофейный дуэт">
+                <h3>Торт "Кофейный дуэт"</h3>
+                <p>Кофейный бисквит и крем на основе сливок. 1250 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake11.jpg" alt="Торт Шоколадный эклер">
+                <h3>Торт "Шоколадный эклер"</h3>
+                <p>Торт с шоколадной начинкой и нежной глазурью. 1350 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake12.jpg" alt="Торт Черничный лес">
+                <h3>Торт "Черничный лес"</h3>
+                <p>Сливочный крем и черника на ванильном бисквите. 1450 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/cake13.jpg" alt="Торт Розовый крем">
+                <h3>Торт "Розовый крем"</h3>
+                <p>Нежный розовый крем и воздушный бисквит. 1100 руб.</p>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Капкейки "Ванильный восторг"</h3>
-            <p>Воздушные ванильные капкейки с кремом. 150 руб.</p>
+
+        <!-- Категория: Пирожные -->
+        <div class="menu-items" id="pastries" style="display:none;">
+            <div class="menu-item">
+                <img src="images/CupCake1.jpg" alt="Макарун Малина и роза">
+                <h3>Макарун "Малина и роза"</h3>
+                <p>Макаруны с малиновым и розовым кремом. 200 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake2.jpg" alt="Эклер Шоколадная карамель">
+                <h3>Эклер "Шоколадная карамель"</h3>
+                <p>Эклер с шоколадным кремом и карамельной глазурью. 180 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake3.jpg" alt="Пирожное Кокосовое облако">
+                <h3>Пирожное "Кокосовое облако"</h3>
+                <p>Кокосовый крем с нежной прослойкой. 220 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake4.jpg" alt="Пирожное Манговое солнце">
+                <h3>Пирожное "Манговое солнце"</h3>
+                <p>Пирожное с манговым муссом и фруктами. 230 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake5.jpg" alt="Эклер Фисташковый крем">
+                <h3>Эклер "Фисташковый крем"</h3>
+                <p>Эклер с фисташковым кремом и ореховой крошкой. 210 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake6.jpg" alt="Тарталетка Лимонное наслаждение">
+                <h3>Тарталетка "Лимонное наслаждение"</h3>
+                <p>Лимонный крем и ванильное тесто. 170 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake7.jpg" alt="Капкейк Ягодный фреш">
+                <h3>Капкейк "Ягодный фреш"</h3>
+                <p>Сливочный крем с ягодной начинкой. 160 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake8.jpg" alt="Капкейк Ванильный рай">
+                <h3>Капкейк "Ванильный рай"</h3>
+                <p>Воздушный ванильный крем. 150 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake9.jpg" alt="Пирожное Фисташка и шоколад">
+                <h3>Пирожное "Фисташка и шоколад"</h3>
+                <p>Сочетание фисташкового и шоколадного крема. 250 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/CupCake10.jpg" alt="Тарталетка Тропический микс">
+                <h3>Тарталетка "Тропический микс"</h3>
+                <p>Манговый и маракуевый крем. 200 руб.</p>
+            </div>
+        </div>
+
+        <!-- Категория: Напитки -->
+        <div class="menu-items" id="drinks" style="display:none;">
+            <div class="menu-item">
+                <img src="images/Drink1.jpg" alt="Кофе Американо">
+                <h3>Кофе "Американо"</h3>
+                <p>Классический черный кофе. 100 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink2.jpg" alt="Капучино">
+                <h3>Капучино</h3>
+                <p>Эспрессо с молочной пенкой. 150 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink3.jpg" alt="Кофе Латте">
+                <h3>Латте</h3>
+                <p>Молочный кофе с карамелью или шоколадом. 170 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink4.jpg" alt="Кофе Матча латте">
+                <h3>Матча латте</h3>
+                <p>Освежающий напиток на основе матча. 200 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink5.jpg" alt="Горячий шоколад">
+                <h3>Горячий шоколад</h3>
+                <p>Насыщенный горячий шоколад. 180 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink6.jpg" alt="Молочный коктель Клубника">
+                <h3>Молочный коктейль "Клубника"</h3>
+                <p>Коктейль с клубничным вкусом. 120 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink7.jpg" alt="Молочный коктель Банан">
+                <h3>Молочный коктейль "Банан"</h3>
+                <p>Коктейль с банановым вкусом. 120 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink8.jpg" alt="Чай Чёрный">
+                <h3>Чай "Черный"</h3>
+                <p>Классический черный чай. 80 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink9.jpg" alt="Чай Зелёный">
+                <h3>Чай "Зеленый"</h3>
+                <p>Зеленый чай с легкой горчинкой. 80 руб.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/Drink10.jpg" alt="Молочный коктель Шоколал">
+                <h3>Молочный коктейль "Шоколад"</h3>
+                <p>Шоколадный молочный коктейль. 130 руб.</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Кондитерская "Сладкоежка". Все права защищены.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

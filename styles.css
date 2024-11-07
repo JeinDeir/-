@@ -18,14 +18,6 @@ header {
     z-index: 1000;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Текст шапки */
 header h1 {
     margin: 0;
     font-size: 36px;
@@ -36,11 +28,13 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
 }
 
 nav ul li a {
@@ -50,73 +44,181 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #e67e22;
-}
-
 /* Логотип */
 .logo {
     max-width: 80px;
 }
 
 /* Кнопки */
-button {
+button,
+.categories button {
     background-color: #e67e22;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin: 0 5px;
 }
 
-button:hover {
+button:hover,
+.categories button:hover {
     background-color: #d35400;
 }
 
-/* Карточки товаров */
-.products-container {
+/* Карточки товаров и меню */
+.products-container,
+.menu-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
 }
 
-.product-item {
-    width: calc(25% - 20px);
-    background-color: white;
+.product-item,
+.menu-item {
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
+    width: calc(25% - 20px);
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.product-item:hover {
+.product-item:hover,
+.menu-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.product-item img {
+.product-item img,
+.menu-item img {
     max-width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    color: #e67e22;
+    font-size: 1.5em;
+    margin: 0;
 }
 
 /* Адаптивность карточек */
 @media (max-width: 800px) {
-    .product-item {
+    .product-item,
+    .menu-item {
         width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 500px) {
-    .product-item {
+    .product-item,
+    .menu-item {
         width: 100%;
     }
 }
 
-/* Общие стили */
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.gallery img {
+    width: calc(33% - 10px);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность галереи */
+@media (max-width: 800px) {
+    .gallery img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery img {
+        width: 100%;
+    }
+}
+
+/* Модальное окно */
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#modal-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Разделы и футер */
 section {
     padding: 40px;
     text-align: center;
@@ -128,143 +230,3 @@ footer {
     padding: 20px;
     color: #fff;
 }
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Отступы между изображениями */
-    justify-content: center;
-}
-
-.gallery img {
-    width: calc(33% - 10px); /* Ширина для трех изображений в ряд */
-    height: auto;
-    border-radius: 10px; /* Скругленные углы */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Адаптивный стиль для галереи */
-@media (max-width: 800px) {
-    .gallery img {
-        width: calc(50% - 10px); /* Два изображения в ряд на меньших экранах */
-    }
-}
-
-@media (max-width: 500px) {
-    .gallery img {
-        width: 100%; /* Одно изображение в ряд на маленьких экранах */
-    }
-}
-/* Общие стили */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-header {
-    background-color: #ffcbcb;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 36px;
-    color: #fff;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-}
-
-/* Стили для галереи */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-}
-
-.gallery img {
-    width: 200px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Стили для модального окна */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: opacity 0.3s ease;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal-content img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-}
-
-#modal-text {
-    margin-top: 15px;
-}
-
-footer {
-    background-color: #ff9999;
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-}
-
-
